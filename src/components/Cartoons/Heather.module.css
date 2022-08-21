@@ -1,0 +1,61 @@
+header {
+  height: 100vh;
+  background-color: #16ffbd;
+  position: relative;
+}
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.favCartoons {
+  position: absolute;
+  top: 20px;
+  right: 65px;
+  background-color: #fcf473;
+  transition: background-color 0.3s ease-out;
+}
+
+.editCartoon {
+  position: absolute;
+  top: 90px;
+  right: 65px;
+  background-color: #fcf473;
+  /* transition: background-color 0.3s ease-out; */
+}
+
+.cartoonTitle a,
+.editCartoon a {
+  color: cornflowerblue;
+}
+
+.listContainer {
+  min-height: 90vh;
+}
+
+.cartoonList {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  padding: 40px;
+  background-color: #fcf473;
+  margin-top: 65px;
+}
+
+.cartoonImgContainer {
+  width: 300px;
+  align-self: stretch;
+  margin: 15px auto;
+  padding: 40px;
+  background-color: #16ffbd;
+}
+
+.cartoonImg {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}

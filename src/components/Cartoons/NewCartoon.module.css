@@ -1,0 +1,74 @@
+.newCartoon {
+  background-color: #12c998;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.formContainer {
+  margin: 50px auto;
+  padding: 60px 80px;
+  background-color: #16ffbd;
+}
+
+.newCartoonForm {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.newCartoonBtn {
+  flex: 100%;
+}
+
+.inputName,
+.inputDescription {
+  font-family: inherit;
+  flex: 1;
+  border: none;
+  border-radius: 15px;
+  background-color: lightpink;
+  margin-top: 30px;
+  padding: 25px;
+}
+
+.newCartoonList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.newCartoonItemContainer {
+  width: 300px;
+  align-self: stretch;
+  margin: 15px auto;
+  padding: 40px;
+  background-color: #16ffbd;
+}
+
+.newCartoonItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
+}
+
+.newCartoonItem h4 {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.newCartoonItem button {
+  width: 150px;
+  background-color: #fcf473;
+}

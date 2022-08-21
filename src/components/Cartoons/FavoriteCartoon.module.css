@@ -1,0 +1,28 @@
+.favCartoon {
+  background-color: #12c998;
+}
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.formContainer {
+  margin: 50px auto;
+  padding: 60px 80px;
+  background-color: #16ffbd;
+}
+
+.formContainer form {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.formContainer label {
+  font-size: 1.3rem;
+  color: cornflowerblue;
+}

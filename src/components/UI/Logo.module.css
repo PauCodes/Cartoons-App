@@ -1,0 +1,8 @@
+.logo {
+  background: url(../../../public/assets/logo-yellow.png);
+  width: 300px;
+  height: 80px;
+  background-size: 290px 60px;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+}
