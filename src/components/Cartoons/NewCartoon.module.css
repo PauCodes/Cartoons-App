@@ -38,37 +38,38 @@
   padding: 25px;
 }
 
-.newCartoonList {
+/* .newCartoonList {
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-}
+  gap: 15px;
+} */
 
-.newCartoonItemContainer {
+/* .newCartoonItemContainer {
   width: 300px;
   align-self: stretch;
   margin: 15px auto;
   padding: 40px;
   background-color: #16ffbd;
-}
+} */
 
-.newCartoonItem {
+/* .newCartoonItem {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
   gap: 15px;
-}
+} */
 
-.newCartoonItem h4 {
+/* .newCartoonItem h4 {
   text-align: center;
   color: cornflowerblue;
-}
+} */
 
-.newCartoonItem button {
+/* .newCartoonItem button {
   width: 150px;
   background-color: #fcf473;
-}
+} */

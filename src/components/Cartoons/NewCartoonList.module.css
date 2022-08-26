@@ -1,0 +1,44 @@
+.newCartoonList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.newCartoonItemContainer {
+  width: 300px;
+  align-self: stretch;
+  margin: 15px auto;
+  padding: 40px;
+  background-color: #16ffbd;
+}
+
+.newCartoonItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
+}
+
+.newCartoonForm {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.newCartoonItem h4 {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.newCartoonItem button {
+  width: 150px;
+  background-color: #fcf473;
+}

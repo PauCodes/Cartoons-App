@@ -11,6 +11,9 @@ const Header = ({data}) => {
             <Card className={styles.cartoonImgContainer}>
                 <li key={cartoon.id}>
                     <Link  to={`/details/${cartoon.id}`}> <img className={styles.cartoonImg} src={cartoon.image} alt={`Avatar of ${cartoon.name}`}/></Link>
+                    <div className={styles.middleText}>
+                        <div className={styles.cartoonName}>{cartoon.name}</div>
+                    </div>
                 </li>
             </Card>
         ));

@@ -52,10 +52,39 @@ header {
   margin: 15px auto;
   padding: 40px;
   background-color: #16ffbd;
+  position: relative;
+}
+
+.cartoonImgContainer:hover .cartoonImg {
+  opacity: 0.2;
 }
 
 .cartoonImg {
   width: 100%;
   height: 120px;
   object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.cartoonImgContainer .middleText {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.cartoonImgContainer:hover .middleText {
+  opacity: 1;
+}
+
+.cartoonImgContainer .middleText {
+  /* background-color: lightpink; */
+  border-radius: 10px;
+  color: #fcf473;
+  font-size: 1.3rem;
+  /* padding: 35px; */
 }

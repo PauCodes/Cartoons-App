@@ -42,8 +42,7 @@ const FavoriteCartoons = ({data}) => {
                 {
                     data.map((cartoon, index) => {
                      return (
-                        <div key={index}>
-                            <label htmlFor={cartoon.id}>{cartoon.name}</label>
+                        <div className={styles.itemContainer} key={index}>
                             <input 
                                 id={cartoon.id} 
                                 value={cartoon.name} 
@@ -51,17 +50,18 @@ const FavoriteCartoons = ({data}) => {
                                 name='cartoonName' 
                                 onChange={handleChange}
                             />
+                             <label htmlFor={cartoon.id}>{cartoon.name}</label>
                         </div>
                     )
                 })
                 }
-                <Button type='submit'>Submit</Button>
+                <Button className={styles.favBtn} type='submit'>Submit</Button>
                 </form>
            {cartoonsSubmitted && 
-               <ul> 
+               <ul className={styles.cartoonListContainer}> 
                    { cartoonsSubmitted.map((cartoon, index) => (
                             <li key={index}>
-                                <h2>{cartoon.name}</h2>
+                                <h4>{cartoon.name}</h4>
                                 <p>{cartoon.description}</p>
                             </li>
                         ))
