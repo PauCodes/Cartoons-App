@@ -1,0 +1,129 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+  position: fixed;
+  top: 10vh;
+  left: 10%;
+  width: 80%;
+  z-index: 100;
+}
+
+.updateCartoonForm {
+  position: relative;
+}
+
+.updateCartoonForm .formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 25px;
+}
+
+.header {
+  background: #c34271;
+  padding: 1rem;
+  position: relative;
+  border-top-left-radius: 15px;
+}
+
+.header h3 {
+  margin: 0;
+  color: white;
+}
+
+.updateCartoonForm button {
+  background: #c34271;
+  color: white;
+  transition: background-color 0.5s ease-out;
+}
+
+.updateCartoonForm button:hover,
+.updateCartoonForm button:active {
+  background: white;
+  color: #c34271;
+  border: 2px solid #c34271;
+}
+
+.updateCartoonForm .newCartoonBtn {
+  border: 2px solid #c34271;
+}
+
+.header .closeBtn {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.formContainer .inputName,
+.formContainer .inputDescription {
+  width: 90%;
+  font-family: inherit;
+  border: 2px solid #c34271;
+  border-radius: 15px;
+  padding: 25px;
+  outline: none;
+}
+
+.actions {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 890px) {
+  .updateCartoonForm .newCartoonBtn {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .formContainer .inputName,
+  .formContainer .inputDescription {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .updateCartoonForm .formContainer {
+    padding: 1rem;
+  }
+
+  .formContainer .inputName,
+  .formContainer .inputDescription {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .modal {
+    top: 5vh;
+    width: 90%;
+    left: 5%;
+  }
+
+  .updateCartoonForm .formContainer {
+    gap: 20px;
+  }
+
+  .header .closeBtn {
+    right: -10px;
+    top: -15px;
+  }
+}

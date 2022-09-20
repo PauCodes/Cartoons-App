@@ -1,5 +1,7 @@
 .favCartoon {
   background-color: #12c998;
+  height: 100vh;
+  overflow: auto;
 }
 .wrapper {
   max-width: 1200px;
@@ -9,7 +11,7 @@
 
 .formContainer {
   margin: 50px auto;
-  padding: 60px 80px;
+  padding: 60px 50px;
   background-color: #16ffbd;
 }
 
@@ -47,6 +49,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  padding: 10px;
 }
 
 .formContainer input[type="checkbox"]::before {
@@ -56,22 +60,28 @@
   transform: scale(0);
   transition: 120ms transform ease-in-out;
   background-color: lightpink;
+  padding: 7px;
 }
 
 .formContainer input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 
-.formContainer .favBtn {
+.favBtn {
   display: block;
-  width: 1000%;
+  width: 100%;
   margin: 30px auto;
+  background: white;
 }
 
 .formContainer .cartoonListContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.formContainer .cartoonListContainer li {
+  margin: 10px 0;
 }
 
 .formContainer .cartoonListContainer h4 {
@@ -82,4 +92,35 @@
 .formContainer .cartoonListContainer p {
   color: dimgray;
   font-size: 1.1rem;
+}
+
+@media (max-width: 850px) {
+  /* .formContainer {
+    padding: 30px;
+  } */
+  .formContainer label {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .formContainer label,
+  .formContainer .cartoonListContainer p {
+    font-size: 0.9rem;
+  }
+  .formContainer .itemContainer {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .formContainer {
+    padding: 30px;
+  }
+  .formContainer form {
+    flex-direction: column;
+  }
+  .formContainer .itemContainer {
+    width: 100%;
+  }
 }

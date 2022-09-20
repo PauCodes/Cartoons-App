@@ -6,3 +6,16 @@
   background-repeat: no-repeat;
   margin-top: 20px;
 }
+
+@media (max-width: 550px) {
+  .logo {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo {
+    width: 250px;
+    background-size: 250px 60px;
+  }
+}

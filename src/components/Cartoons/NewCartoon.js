@@ -6,19 +6,20 @@ import ErrorModal from "../UI/ErrorModal";
 import Logo from "../UI/Logo";
 import styles from './NewCartoon.module.css';
 import NewCartoonList from "./NewCartoonList";
+import { v4 as uuidv4 } from 'uuid';
 
-const NewCartoon = ({data, setCartoons}) => {
-    const [ inputs, setInputs ] = useState({name: '', description: ''});
+const NewCartoon = ({data, setCartoons, cartoonAdded, removeCartoon, handleUpdate}) => {
+
+    const [ newCartoon, setNewCartoon ] = useState({id: uuidv4(), name: '', description: ''});
     const [ error, setError ] = useState();
 
-
-    const cartoonAdded = (cartoon) => {
-        const findCartoon = data.find(item => item === cartoon);
-        console.log(findCartoon);
-        if(findCartoon !== cartoon.name) {
-            setCartoons([...data, cartoon]);
-        }
-    }
+    // const newCartoonInput = (cartoon) => {
+    //     const findCartoon = data.find(item => cartoon === item.name);
+    //     console.log(findCartoon);
+        
+    // }
+    // newCartoonInput() //ELIMINAR!!!
+    
  
     const handleChange = (e) => {
         // const newCartoon = {
@@ -27,29 +28,27 @@ const NewCartoon = ({data, setCartoons}) => {
         // setInputs({...inputs, ...newCartoon});
 
         //https://www.w3schools.com/react/showreact.asp?filename=demo2_react_forms_multiple
-        setInputs({...inputs, [e.target.name]: e.target.value});
+        setNewCartoon({...newCartoon, [e.target.name]: e.target.value});        
     };
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(inputs.name.trim().length === 0 || inputs.description.trim().length === 0 ) {
+        if(newCartoon.name.trim().length === 0 || newCartoon.description.trim().length === 0 ) {
             setError({
-                title: 'invalid inputs',
+                title: 'Invalid inputs',
                 message: 'Please enter a valid name and description'
             });
             return;
         };
-        cartoonAdded(inputs);
-        setInputs({name: '', description: ''});
+        cartoonAdded(newCartoon);
+        setNewCartoon({name: '', description: ''});
     };
 
 
     const errorHandler = () => {
         setError(null);
     };
-
-    
 
     return (
         <section className={styles.newCartoon}>
@@ -59,20 +58,21 @@ const NewCartoon = ({data, setCartoons}) => {
                     <Card className={styles.formContainer}> 
                         <h3>Add new cartoon</h3>
                         <form className={styles.newCartoonForm} onSubmit={handleSubmit}>              
-                            <label className='sr-only'>Name</label>
-                            <input className={styles.inputName} type='text' name='name' placeholder='Name' value={inputs?.name || ''} onChange={handleChange}></input>
-                            <label className='sr-only' >Description</label>
-                            <textarea className={styles.inputDescription} cols="20" rows="6" name='description' value={inputs?.description || ''} placeholder='Description' onChange={handleChange}/>
+                            <label htmlFor='name' className='sr-only'>Name</label>
+                            <input className={styles.inputName} type='text' id='name' name='name' placeholder='Name' value={newCartoon.name} onChange={handleChange}></input>
+                            <label htmlFor='description' className='sr-only'>Description</label>
+                            <textarea className={styles.inputDescription} cols="20" rows="6" id='description' name='description' value={newCartoon.description} placeholder='Description' onChange={handleChange}/>
                             <Button className={styles.newCartoonBtn} type='click'>Add</Button>  
                         </form>
                     </Card>
-                <div>
-                    <NewCartoonList data={data} setCartoons={setCartoons}/>
+                <div className={styles.newCartoonListContainer}>
+                    <NewCartoonList data={data} setCartoons={setCartoons} removeCartoon={removeCartoon} handleUpdate={handleUpdate}/>
                 </div>
                 <Link to='/'><i className='fa-solid fa-arrow-left'></i></Link>
             </div>
         </section>
     );
 };
+
 
 export default NewCartoon;

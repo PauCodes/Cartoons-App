@@ -6,6 +6,7 @@
   height: 100vh;
   z-index: 10;
   background: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
 }
 
 .modal {
@@ -37,9 +38,43 @@
   justify-content: flex-end;
 }
 
-@media (min-width: 768px) {
+.modal button {
+  width: 150px;
+  border: 2px solid #c34271;
+  background: #c34271;
+  color: white;
+  transition: background 0.5s ease-out;
+}
+
+.modal button:hover,
+.modal button:active {
+  background: white;
+  color: #c34271;
+  border: 2px solid #c34271;
+}
+
+@media (min-width: 875px) {
   .modal {
     left: calc(50% - 20rem);
     width: 40rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content p {
+    font-size: 1rem;
+  }
+  .header h3 {
+    font-size: 1.5rem;
+  }
+  .modal button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .modal {
+    width: 90%;
+    left: 5%;
   }
 }

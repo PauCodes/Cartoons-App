@@ -1,6 +1,5 @@
 header {
   height: 100vh;
-  background-color: #16ffbd;
   position: relative;
 }
 .wrapper {
@@ -11,80 +10,31 @@ header {
 
 .favCartoons {
   position: absolute;
-  top: 20px;
-  right: 65px;
+  top: 0;
+  right: 0;
   background-color: #fcf473;
   transition: background-color 0.3s ease-out;
 }
 
 .editCartoon {
   position: absolute;
-  top: 90px;
-  right: 65px;
+  top: 70px;
+  right: 0;
   background-color: #fcf473;
-  /* transition: background-color 0.3s ease-out; */
 }
 
-.cartoonTitle a,
+.favCartoons a,
 .editCartoon a {
   color: cornflowerblue;
 }
 
-.listContainer {
-  min-height: 90vh;
-}
-
-.cartoonList {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  border-radius: 15px;
-  padding: 40px;
-  background-color: #fcf473;
-  margin-top: 65px;
-}
-
-.cartoonImgContainer {
-  width: 300px;
-  align-self: stretch;
-  margin: 15px auto;
-  padding: 40px;
-  background-color: #16ffbd;
-  position: relative;
-}
-
-.cartoonImgContainer:hover .cartoonImg {
-  opacity: 0.2;
-}
-
-.cartoonImg {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  transition: 0.5s ease;
-}
-
-.cartoonImgContainer .middleText {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.cartoonImgContainer:hover .middleText {
-  opacity: 1;
-}
-
-.cartoonImgContainer .middleText {
-  /* background-color: lightpink; */
-  border-radius: 10px;
-  color: #fcf473;
-  font-size: 1.3rem;
-  /* padding: 35px; */
+@media (max-width: 550px) {
+  .favCartoons,
+  .editCartoon {
+    width: 100%;
+    position: initial;
+  }
+  .favCartoons {
+    margin: 20px 0 20px 0;
+  }
 }

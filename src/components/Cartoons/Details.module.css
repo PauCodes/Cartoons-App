@@ -1,0 +1,47 @@
+.cartoonDetails {
+  background-color: #12c998;
+  height: 100vh;
+  overflow: auto;
+}
+.cartoonDetails .wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cartoonDetails .detailsContainer {
+  margin: 50px auto;
+  padding: 60px 80px;
+  background-color: #16ffbd;
+}
+
+.cartoonDetails h3 {
+  margin-bottom: 20px;
+}
+
+/* @media (max-height: 1120px) and (max-width: 850px) {
+  .cartoonDetails {
+    height: auto;
+  }
+} */
+
+@media (max-width: 550px) {
+  .cartoonDetails .detailsContainer {
+    padding: 30px;
+  }
+  .cartoonDetails h3 {
+    font-size: 1.5rem;
+  }
+  .cartoonDetails p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .cartoonDetails h3 {
+    font-size: 1.3rem;
+  }
+  .cartoonDetails p {
+    font-size: 1rem;
+  }
+}

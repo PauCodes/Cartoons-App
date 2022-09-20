@@ -14,7 +14,6 @@ const FavoriteCartoons = ({data}) => {
     const handleChange = (e) => {       
         if(e.target.checked) {
              let myFav = data.find(cartoon => (
-            // console.log(cartoon)
             cartoon.name === e.target.value
         ));
         console.log(myFav);

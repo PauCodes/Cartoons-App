@@ -1,4 +1,7 @@
 import { Link, useParams } from "react-router-dom";
+import Card from "../UI/Card";
+import Logo from "../UI/Logo";
+import styles from  './Details.module.css';
 
 
 const Details = ({data}) => {
@@ -11,10 +14,15 @@ const Details = ({data}) => {
     
 
     return (
-        <section className='wrapper'>
-            <h2>{name}</h2>
-            <p>{description}</p>
-            <Link to='/'><i className='fa-solid fa-arrow-left'></i></Link>
+        <section className={styles.cartoonDetails}>
+            <div className={styles.wrapper}>
+                <Logo />
+                <Card className={styles.detailsContainer}>
+                <h3>{name}</h3>
+                <p>{description}</p>
+                <Link to='/'><i className='fa-solid fa-arrow-left'></i></Link>
+                </Card>
+            </div>
         </section>
     ); 
 };

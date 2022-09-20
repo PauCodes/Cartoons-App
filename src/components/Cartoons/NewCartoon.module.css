@@ -1,5 +1,7 @@
 .newCartoon {
   background-color: #12c998;
+  height: 100vh;
+  overflow: auto;
 }
 
 .wrapper {
@@ -25,6 +27,7 @@
 
 .newCartoonBtn {
   flex: 100%;
+  background: white;
 }
 
 .inputName,
@@ -36,40 +39,39 @@
   background-color: lightpink;
   margin-top: 30px;
   padding: 25px;
+  outline: none;
 }
 
-/* .newCartoonList {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-} */
+@media (max-width: 950px) {
+  .newCartoonForm {
+    flex-direction: column;
+  }
+  .inputName,
+  .inputDescription,
+  .newCartoonBtn {
+    width: 100%;
+  }
 
-/* .newCartoonItemContainer {
-  width: 300px;
-  align-self: stretch;
-  margin: 15px auto;
-  padding: 40px;
-  background-color: #16ffbd;
-} */
+  .inputDescription {
+    margin-top: 0;
+  }
+}
 
-/* .newCartoonItem {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  gap: 15px;
-} */
+@media (max-width: 620px) {
+  .formContainer {
+    padding: 20px 30px;
+  }
+}
 
-/* .newCartoonItem h4 {
-  text-align: center;
-  color: cornflowerblue;
-} */
+@media (max-width: 550px) {
+  .formContainer h3 {
+    text-align: center;
+  }
+}
 
-/* .newCartoonItem button {
-  width: 150px;
-  background-color: #fcf473;
-} */
+@media (max-width: 485px) {
+  .newCartoonListContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

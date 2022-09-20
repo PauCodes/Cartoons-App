@@ -52,7 +52,14 @@ const Data = [
         name: 'PJ Masks',
         description: 'When young friends Connor, Amaya, and Greg put on their pajamas and activate their animal amulets, they turn into their alter egos: Catboy, Owlette, and Gekko as they embark on adventures that are filled with action.',
         image: './assets/pjmasks.png'
+    },
+    {
+        id: 10,
+        name: 'Bluey',
+        description: 'Bluey is a loveable, six-year-old Blue Heeler dog, who loves to turn everyday family life into endless, playful adventures. Kids can recreate some of the most memorable moments from the show at home with figures & plush toys!',
+        image: './assets/bluey.png'
     }
+
 ];
 
 export default Data;
