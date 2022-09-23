@@ -8,6 +8,27 @@ header {
   margin: 0 auto;
 }
 
+.moreInfoBtn {
+  position: absolute;
+  top: 30px;
+  left: 300px;
+  visibility: hidden;
+}
+
+.moreInfo {
+  background: url(../../../public/assets/xClose.png);
+  width: 100px;
+  height: 100px;
+  background-size: 35px;
+  background-repeat: no-repeat;
+  margin: 0;
+  transform: rotate(45deg);
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: 270px;
+}
+
 .favCartoons {
   position: absolute;
   top: 0;

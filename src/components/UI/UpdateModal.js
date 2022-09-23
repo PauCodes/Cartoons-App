@@ -23,10 +23,10 @@ const UpdateModal = ({cartoonId, cartoonName, description, handleUpdate, setEdit
 
     const handleUpdateValue = (e) => {
         e.preventDefault();
-        console.log('UPDATED!');
         handleUpdate(cartoonId, newValue, newDescription);
         setEditCartoon(false)
    };
+   
     return (
         <div>
         <div className={styles.backdrop}>

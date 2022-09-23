@@ -37,6 +37,7 @@ const FavoriteCartoons = ({data}) => {
             <div className={styles.wrapper}>
             <Logo />
             <Card className={styles.formContainer}>
+                <h3 className={styles.top10Title}>Create your Top 10 list of Cartoons :</h3>
                 <form onSubmit={handleSubmit}>
                 {
                     data.map((cartoon, index) => {
@@ -65,8 +66,7 @@ const FavoriteCartoons = ({data}) => {
                             </li>
                         ))
                     }
-
-               </ul>                
+               </ul>         
            }
        
         <Link to='/'><i className='fa-solid fa-arrow-left'></i></Link>

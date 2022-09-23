@@ -1,13 +1,13 @@
 import Card from "./Card";
 import Button from "./Button";
-import styles from './ErrorModal.module.css'
+import styles from './MoreInfoModal.module.css'
 
 
-const ErrorModal = ({errorHandler, title, message}) => {
+const MoreInfoModal = ({title, message, closeMoreInfoHandle}) => {
     
     return (
         <>
-            <div className={styles.backdrop} onClick={errorHandler}>
+            <div className={styles.backdrop} onClick={closeMoreInfoHandle}>
                 <Card className={styles.modal}>
                     <header className={styles.header}>
                         <h3>{title}</h3>
@@ -16,7 +16,7 @@ const ErrorModal = ({errorHandler, title, message}) => {
                         <p>{message}</p>
                     </div>
                     <footer className={styles.actions}>
-                        <Button onClick={errorHandler}>Ok</Button>
+                        <Button onClick={closeMoreInfoHandle}>Ok</Button>
                     </footer>
                 </Card>
             </div>
@@ -24,4 +24,4 @@ const ErrorModal = ({errorHandler, title, message}) => {
     );
 };
 
-export default ErrorModal;
+export default MoreInfoModal;

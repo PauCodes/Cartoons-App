@@ -16,11 +16,13 @@ function App() {
     //NEW CARTOON: *ADD ID!!
     const cartoonAdded = (cartoon) => {
       const findCartoon = cartoons.find(item => item.name === cartoon);
-      console.log(cartoon.name);
-      if(findCartoon !== cartoon) {
+      console.log(cartoons);
+      if(findCartoon === undefined) {
           setCartoons([...cartoons, cartoon]);
+          console.log(cartoons);
+          alert(`${cartoon.name} already exist`)
       }else {
-        alert(`${cartoon} already exist`)
+        
       };
   };
 
