@@ -16,17 +16,16 @@ header {
 }
 
 .moreInfo {
-  background: url(../../../public/assets/xClose.png);
+  background: url(../../../public/assets/moreInfo.png);
   width: 100px;
   height: 100px;
-  background-size: 35px;
+  background-size: 40px;
   background-repeat: no-repeat;
   margin: 0;
-  transform: rotate(45deg);
   cursor: pointer;
   position: absolute;
-  top: 30px;
-  left: 270px;
+  top: 15px;
+  left: 300px;
 }
 
 .favCartoons {
