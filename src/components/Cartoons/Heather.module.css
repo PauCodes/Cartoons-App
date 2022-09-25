@@ -10,15 +10,17 @@ header {
 
 .moreInfoBtn {
   position: absolute;
-  top: 30px;
-  left: 300px;
+  width: 80px;
+  padding: 10px;
+  top: 5px;
+  left: 290px;
   visibility: hidden;
 }
 
 .moreInfo {
-  background: url(../../../public/assets/moreInfo.png);
-  width: 100px;
-  height: 100px;
+  background: url(../../../public/assets/moreInfoBtn.png);
+  width: 50px;
+  height: 50px;
   background-size: 40px;
   background-repeat: no-repeat;
   margin: 0;
@@ -26,6 +28,7 @@ header {
   position: absolute;
   top: 15px;
   left: 300px;
+  padding: 20px;
 }
 
 .favCartoons {
@@ -48,13 +51,18 @@ header {
   color: cornflowerblue;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 570px) {
   .favCartoons,
   .editCartoon {
     width: 100%;
     position: initial;
   }
   .favCartoons {
-    margin: 20px 0 20px 0;
+    margin: 40px 0 20px 0;
+  }
+  .moreInfo,
+  .moreInfoBtn {
+    top: 75px;
+    left: 45%;
   }
 }

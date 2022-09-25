@@ -24,4 +24,4 @@ const MoreInfoModal = ({title, message, closeMoreInfoHandle}) => {
     );
 };
 
-export default MoreInfoModal;
+export default MoreInfoModal; 

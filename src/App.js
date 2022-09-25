@@ -4,25 +4,24 @@ import './App.css';
 import Details from './components/Cartoons/Details';
 import Data from './components/Cartoons/Data';
 import { useState } from 'react';
-import FavoriteCartoons from './components/Cartoons/FavoriteCartoons';
 import NewCartoon from './components/Cartoons/NewCartoon';
+import ListOfFavs from './components/Cartoons/ListOfFavs';
 
 function App() {
 
   //MAIN STATE
   const [ cartoons, setCartoons ] = useState(Data);
+  const [ cartoonRepeated, setCartoonRepeated ] = useState();
 
   //CRUD FUNCTIONS
-    //NEW CARTOON: *ADD ID!!
+    //NEW CARTOON:
     const cartoonAdded = (cartoon) => {
-      const findCartoon = cartoons.find(item => item.name === cartoon);
-      console.log(cartoons);
+      const findCartoon = cartoons.find(item => item.name.toLowerCase() === cartoon.name.toLowerCase());
+      
       if(findCartoon === undefined) {
           setCartoons([...cartoons, cartoon]);
-          console.log(cartoons);
-          alert(`${cartoon.name} already exist`)
       }else {
-        
+         setCartoonRepeated({message: `${cartoon.name} already exist`})
       };
   };
 
@@ -42,13 +41,14 @@ function App() {
       setCartoons(dataCopy);
   };
 
+
   return (
     <div className="App">
       <Routes>
         <Route path='/' element={<Header data={cartoons}/>}/>
         <Route path='/details/:cartoonId' element={<Details data={cartoons}/>}/>
-        <Route path='/favoritecartoons/' element={<FavoriteCartoons data={cartoons}/>}/>
-        <Route path='/newcartoon' element={<NewCartoon data={cartoons} cartoonAdded={cartoonAdded} removeCartoon={removeCartoon} handleUpdate={handleUpdate}/>} />
+        <Route path='/favoritecartoons' element={<ListOfFavs data={cartoons}/>}/>
+        <Route path='/newcartoon' element={<NewCartoon data={cartoons} cartoonAdded={cartoonAdded} removeCartoon={removeCartoon} handleUpdate={handleUpdate} cartoonRepeated={cartoonRepeated} setCartoonRepeated={setCartoonRepeated}/>} />
       </Routes>
     </div>
   );

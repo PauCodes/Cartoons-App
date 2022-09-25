@@ -72,9 +72,30 @@
   }
 }
 
+@media (max-width: 625px) {
+  .modal {
+    top: 10vh;
+  }
+  .header h3 {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 575px) {
   .modal {
     width: 90%;
     left: 5%;
+  }
+  .actions {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .header h3 {
+    font-size: 1rem;
+  }
+  .content p {
+    font-size: 0.9rem;
   }
 }

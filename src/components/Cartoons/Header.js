@@ -35,7 +35,6 @@ const Header = ({data}) => {
                     <button  className={`${styles.moreInfoBtn} ${styles['sr-only']}`}>More +</button>
                     { moreInfo && <MoreInfoModal title={moreInfo.title} message={moreInfo.message} closeMoreInfoHandle={closeMoreInfoHandle}/>}
                     <div onClick={onClickHandle} className={styles.moreInfo}></div>
-                    {/* <h4>Learn more about your favourite cartoons</h4> */}
                     <Button className={styles.favCartoons}><h2><Link to='/favoritecartoons'>Top 10</Link></h2></Button>
                     <Button className={styles.editCartoon}><h2><Link to='/newcartoon'>Edit</Link></h2></Button>
                 </header>

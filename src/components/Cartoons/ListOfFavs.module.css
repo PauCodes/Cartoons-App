@@ -1,0 +1,101 @@
+.favCartoon {
+  background-color: #12c998;
+  height: 100vh;
+  overflow: auto;
+}
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.formContainer {
+  margin: 50px auto;
+  padding: 60px 50px;
+  background-color: #16ffbd;
+}
+
+.formContainer h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: cornflowerblue;
+}
+
+.formContainer .sectionExplanation {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.formContainer .cartoonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.cartoonsContainer .cartoonsList {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer .itemContainer {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 15px;
+  background-color: #fcf473;
+  border: 3px solid pink;
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.itemContainer .cartoonTitle {
+  margin-bottom: 0;
+  color: cornflowerblue;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  .formContainer h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .formContainer h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .formContainer h3 {
+    font-size: 1rem;
+  }
+  .formContainer .sectionExplanation {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .formContainer .itemContainer {
+    width: 320px;
+  }
+  .itemContainer .cartoonTitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .formContainer .itemContainer {
+    height: 80px;
+    width: 285px;
+  }
+}

@@ -8,18 +8,11 @@ import styles from './NewCartoon.module.css';
 import NewCartoonList from "./NewCartoonList";
 import { v4 as uuidv4 } from 'uuid';
 
-const NewCartoon = ({data, setCartoons, cartoonAdded, removeCartoon, handleUpdate}) => {
+const NewCartoon = ({data, setCartoons, cartoonAdded, removeCartoon, handleUpdate, cartoonRepeated, setCartoonRepeated}) => {
 
     const [ newCartoon, setNewCartoon ] = useState({id: uuidv4(), name: '', description: ''});
     const [ error, setError ] = useState();
 
-    // const newCartoonInput = (cartoon) => {
-    //     const findCartoon = data.find(item => cartoon === item.name);
-    //     console.log(findCartoon);
-        
-    // }
-    // newCartoonInput() //ELIMINAR!!!
-    
  
     const handleChange = (e) => {
         // const newCartoon = {
@@ -30,7 +23,6 @@ const NewCartoon = ({data, setCartoons, cartoonAdded, removeCartoon, handleUpdat
         //https://www.w3schools.com/react/showreact.asp?filename=demo2_react_forms_multiple
         setNewCartoon({...newCartoon, [e.target.name]: e.target.value});        
     };
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -48,11 +40,13 @@ const NewCartoon = ({data, setCartoons, cartoonAdded, removeCartoon, handleUpdat
 
     const errorHandler = () => {
         setError(null);
+        setCartoonRepeated(null)
     };
 
     return (
         <section className={styles.newCartoon}>
             {error && <ErrorModal title={error.title} message={error.message} errorHandler={errorHandler}/>}
+            {cartoonRepeated && <ErrorModal message={cartoonRepeated.message} errorHandler={errorHandler}/>}
             <div className={styles.wrapper}>
                 <Logo />
                     <Card className={styles.formContainer}> 
