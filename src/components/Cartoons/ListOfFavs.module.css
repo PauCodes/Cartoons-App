@@ -99,3 +99,9 @@
     width: 285px;
   }
 }
+
+@media (max-width: 320px) {
+  .formContainer .itemContainer {
+    width: 250px;
+  }
+}
